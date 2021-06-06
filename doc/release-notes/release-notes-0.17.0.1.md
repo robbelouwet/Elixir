@@ -1,16 +1,16 @@
-Bitcoin Core version 0.17.0.1 is now available from:
+Elixir Core version 0.17.0.1 is now available from:
 
-  <https://bitcoincore.org/bin/bitcoin-core-0.17.0.1/>
+  <https://elixircore.org/bin/elixir-core-0.17.0.1/>
 
 This release provides a minor bug fix for 0.17.0.
 
 Please report bugs using the issue tracker at GitHub:
 
-  <https://github.com/bitcoin/bitcoin/issues>
+  <https://github.com/elixir/elixir/issues>
 
 To receive security and update notifications, please subscribe to:
 
-  <https://bitcoincore.org/en/list/announcements/join/>
+  <https://elixircore.org/en/list/announcements/join/>
 
 Notable changes
 ===============
