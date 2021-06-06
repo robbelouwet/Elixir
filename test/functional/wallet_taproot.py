@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
-# Copyright (c) 2021 The Bitcoin Core developers
+# Copyright (c) 2021 The Elixir Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 """Test generation and spending of P2TR addresses."""
 
 import random
 
-from test_framework.test_framework import BitcoinTestFramework
+from test_framework.test_framework import ElixirTestFramework
 from test_framework.util import assert_equal
 from test_framework.descriptors import descsum_create
 from test_framework.script import (CScript, OP_CHECKSIG, taproot_construct)
@@ -168,7 +168,7 @@ def compute_taproot_address(pubkey, scripts):
     assert tap.scriptPubKey[1] == 0x20
     return encode_segwit_address("bcrt", 1, tap.scriptPubKey[2:])
 
-class WalletTaprootTest(BitcoinTestFramework):
+class WalletTaprootTest(ElixirTestFramework):
     """Test generation and spending of P2TR address outputs."""
 
     def set_test_params(self):

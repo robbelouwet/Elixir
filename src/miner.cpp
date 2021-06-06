@@ -1,5 +1,5 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
-// Copyright (c) 2009-2020 The Bitcoin Core developers
+// Copyright (c) 2009-2020 The Elixir Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -49,7 +49,7 @@ void RegenerateCommitments(CBlock& block, ChainstateManager& chainman)
     {
         // TODO: Temporary scope to check correctness of refactored code.
         // Should be removed manually after merge of
-        // https://github.com/bitcoin/bitcoin/pull/20158
+        // https://github.com/elixir/elixir/pull/20158
         LOCK(::cs_main);
         assert(std::addressof(g_chainman.m_blockman) == std::addressof(chainman.m_blockman));
         prev_block = chainman.m_blockman.LookupBlockIndex(block.hashPrevBlock);

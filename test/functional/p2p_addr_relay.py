@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# Copyright (c) 2020 The Bitcoin Core developers
+# Copyright (c) 2020 The Elixir Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 """
@@ -14,7 +14,7 @@ from test_framework.messages import (
     msg_getaddr
 )
 from test_framework.p2p import P2PInterface
-from test_framework.test_framework import BitcoinTestFramework
+from test_framework.test_framework import ElixirTestFramework
 from test_framework.util import (
     assert_equal,
 )
@@ -48,7 +48,7 @@ class GetAddrStore(P2PInterface):
         return self.num_ipv4_received != 0
 
 
-class AddrTest(BitcoinTestFramework):
+class AddrTest(ElixirTestFramework):
     counter = 0
     mocktime = int(time.time())
 

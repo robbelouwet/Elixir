@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# Copyright (c) 2019-2020 The Bitcoin Core developers
+# Copyright (c) 2019-2020 The Elixir Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -22,7 +22,7 @@ from test_framework.blocktools import (
 )
 from test_framework.messages import CTransaction, FromHex, msg_pong, msg_tx
 from test_framework.p2p import P2PDataStore, P2PInterface
-from test_framework.test_framework import BitcoinTestFramework
+from test_framework.test_framework import ElixirTestFramework
 from test_framework.util import assert_equal
 
 
@@ -36,7 +36,7 @@ class SlowP2PInterface(P2PInterface):
         time.sleep(0.1)
         self.send_message(msg_pong(message.nonce))
 
-class P2PEvict(BitcoinTestFramework):
+class P2PEvict(ElixirTestFramework):
     def set_test_params(self):
         self.setup_clean_chain = True
         self.num_nodes = 1

@@ -1,6 +1,6 @@
-# Bootstrappable Bitcoin Core Builds
+# Bootstrappable Elixir Core Builds
 
-This directory contains the files necessary to perform bootstrappable Bitcoin
+This directory contains the files necessary to perform bootstrappable Elixir
 Core builds.
 
 [Bootstrappability][b17e] furthers our binary security guarantees by allowing us
@@ -128,7 +128,7 @@ export JOBS=1 ADDITIONAL_GUIX_COMMON_FLAGS='--max-jobs=8'
 
 ### As a Tool for Deterministic Builds
 
-From the top of a clean Bitcoin Core repository:
+From the top of a clean Elixir Core repository:
 
 ```sh
 ./contrib/guix/guix-build
@@ -255,7 +255,7 @@ This can be overridden for all `guix` invocations by passing the
 overridden on a call-by-call basis by passing the same `--substitute-urls`
 option to client tools such at `guix environment`.
 
-To use dongcarl's substitute server for Bitcoin Core builds after having
+To use dongcarl's substitute server for Elixir Core builds after having
 [authorized his signing key](#authorize-the-signing-keys):
 
 ```

@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 #
-# Copyright (c) 2018-2020 The Bitcoin Core developers
+# Copyright (c) 2018-2020 The Elixir Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -84,7 +84,7 @@ DOCKER_EXEC echo "Free disk space:"
 DOCKER_EXEC df -h
 
 if [ ! -d ${DIR_QA_ASSETS} ]; then
-  DOCKER_EXEC git clone --depth=1 https://github.com/bitcoin-core/qa-assets ${DIR_QA_ASSETS}
+  DOCKER_EXEC git clone --depth=1 https://github.com/elixir-core/qa-assets ${DIR_QA_ASSETS}
 fi
 export DIR_FUZZ_IN=${DIR_QA_ASSETS}/fuzz_seed_corpus/
 export DIR_UNIT_TEST_DATA=${DIR_QA_ASSETS}/unit_test_data/

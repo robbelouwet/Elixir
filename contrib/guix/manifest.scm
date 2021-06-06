@@ -134,14 +134,14 @@ chain for " target " development."))
   (package-with-extra-patches gcc-8
     (search-our-patches "gcc-8-sort-libtool-find-output.patch")))
 
-(define* (make-bitcoin-cross-toolchain target
+(define* (make-elixir-cross-toolchain target
                                        #:key
                                        (base-gcc-for-libc gcc-7)
                                        (base-kernel-headers linux-libre-headers-5.4)
                                        (base-libc glibc)  ; glibc 2.31
                                        (base-gcc (make-gcc-rpath-link base-gcc)))
   "Convenience wrapper around MAKE-CROSS-TOOLCHAIN with default values
-desirable for building Bitcoin Core release binaries."
+desirable for building Elixir Core release binaries."
   (make-cross-toolchain target
                         base-gcc-for-libc
                         base-kernel-headers
@@ -604,7 +604,7 @@ inspecting signatures in Mach-O binaries.")
                  (make-nsis-with-sde-support nsis-x86_64)
                  osslsigncode))
           ((string-contains target "-linux-")
-           (list (make-bitcoin-cross-toolchain target)))
+           (list (make-elixir-cross-toolchain target)))
           ((string-contains target "darwin")
            (list clang-toolchain-10 binutils imagemagick libtiff librsvg font-tuffy cmake xorriso python-signapple))
           (else '())))))

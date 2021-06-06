@@ -1,0 +1,33 @@
+# /etc/conf.d/elixird: config file for /etc/init.d/elixird
+
+# Config file location
+#BITCOIND_CONFIGFILE="/etc/elixir/elixir.conf"
+
+# What directory to write pidfile to?  (created and owned by $BITCOIND_USER)
+#BITCOIND_PIDDIR="/var/run/elixird"
+
+# What filename to give the pidfile
+#BITCOIND_PIDFILE="${BITCOIND_PIDDIR}/elixird.pid"
+
+# Where to write elixird data (be mindful that the blockchain is large)
+#BITCOIND_DATADIR="/var/lib/elixird"
+
+# User and group to own elixird process
+#BITCOIND_USER="elixir"
+#BITCOIND_GROUP="elixir"
+
+# Path to elixird executable
+#BITCOIND_BIN="/usr/bin/elixird"
+
+# Nice value to run elixird under
+#BITCOIND_NICE=0
+
+# Additional options (avoid -conf and -datadir, use flags above)
+#BITCOIND_OPTS=""
+
+# The timeout in seconds OpenRC will wait for elixird to terminate
+# after a SIGTERM has been raised.
+# Note that this will be mapped as argument to start-stop-daemon's
+# '--retry' option, which means you can specify a retry schedule
+# here. For more information see man 8 start-stop-daemon.
+BITCOIND_SIGTERM_TIMEOUT=600

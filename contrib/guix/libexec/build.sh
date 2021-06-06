@@ -213,7 +213,7 @@ make -C depends --jobs="$JOBS" HOST="$HOST" \
                                    x86_64_linux_RANLIB=x86_64-linux-gnu-ranlib \
                                    x86_64_linux_NM=x86_64-linux-gnu-nm \
                                    x86_64_linux_STRIP=x86_64-linux-gnu-strip \
-                                   qt_config_opts_i686_linux='-platform linux-g++ -xplatform bitcoin-linux-g++' \
+                                   qt_config_opts_i686_linux='-platform linux-g++ -xplatform elixir-linux-g++' \
                                    FORCE_USE_SYSTEM_CLANG=1
 
 
@@ -301,7 +301,7 @@ mkdir -p "$DISTSRC"
 
     sed -i.old 's/-lstdc++ //g' config.status libtool src/univalue/config.status src/univalue/libtool
 
-    # Build Bitcoin Core
+    # Build Elixir Core
     make --jobs="$JOBS" ${V:+V=1}
 
     # Perform basic ELF security checks on a series of executables.
@@ -319,12 +319,12 @@ mkdir -p "$DISTSRC"
             ;;
     esac
 
-    # Setup the directory where our Bitcoin Core build for HOST will be
+    # Setup the directory where our Elixir Core build for HOST will be
     # installed. This directory will also later serve as the input for our
     # binary tarballs.
     INSTALLPATH="${PWD}/installed/${DISTNAME}"
     mkdir -p "${INSTALLPATH}"
-    # Install built Bitcoin Core to $INSTALLPATH
+    # Install built Elixir Core to $INSTALLPATH
     case "$HOST" in
         *darwin*)
             make install-strip DESTDIR="${INSTALLPATH}" ${V:+V=1}
